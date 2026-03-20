@@ -1,0 +1,109 @@
+# ------------------------------
+# CYBERPUNK CLEAN i3 CONFIG
+# ------------------------------
+
+set $mod Mod4
+
+font pango:JetBrainsMono Nerd Font 10
+
+# Autostart
+exec --no-startup-id nm-applet
+exec --no-startup-id flameshot &
+exec --no-startup-id zapzap &
+exec_always --no-startup-id picom
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id eww daemon
+exec --no-startup-id sh -c "sleep 2 && gtk-launch com.spotify.Client"
+exec_always --no-startup-id sh -c "sleep 1 && eww open sys"
+exec --no-startup-id alacritty
+
+exec_always --no-startup-id feh --bg-fill /home/vishnu/Pictures/wallpaper.jpg
+
+# Gaps & Borders
+gaps inner 10
+gaps outer 5
+default_border pixel 2
+
+client.focused          #00f5ff #00f5ff #000000 #00f5ff
+client.unfocused        #1a1a2e #1a1a2e #888888 #1a1a2e
+
+# Terminal
+bindsym $mod+Return exec alacritty
+
+# Close window
+bindsym $mod+Shift+q kill
+
+# Rofi launcher
+bindsym $mod+d exec rofi -show drun -show-icons
+
+
+# Ranger file manager
+bindsym $mod+e exec alacritty -e ranger
+
+# Focus movement (vim style)
+bindsym $mod+g focus left
+bindsym $mod+h focus down
+bindsym $mod+j focus up
+bindsym $mod+k focus right
+
+# Move windows
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Split
+bindsym $mod+v split v
+bindsym $mod+b split h
+
+# Fullscreen
+bindsym $mod+f fullscreen toggle
+
+# Floating toggle
+bindsym $mod+Shift+space floating toggle
+
+# Restart i3
+bindsym $mod+Shift+r restart
+
+# Exit i3
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'"
+
+# Workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+v exec ~/.config/i3/scripts/lock.sh
+# Volume controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+# Brightness control
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym $mod+Shift+x exec --no-startup-id ~/.config/rofi/powermenu.sh
+for_window [title="btop"] floating enable
+for_window [title="btop"] move position center
+
+
+
+# Scratchpad (minimize replacement)
+bindsym $mod+m move scratchpad
+bindsym $mod+Shift+m scratchpad show
+
+
+bindsym $mod+L exec --no-startup-id i3lock -c 111111
+bindsym Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png

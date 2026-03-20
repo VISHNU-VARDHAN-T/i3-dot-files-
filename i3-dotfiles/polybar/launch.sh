@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Kill existing polybar instances
+killall -q polybar
+
+# Wait until processes fully stop
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+# Launch bar
+polybar example &

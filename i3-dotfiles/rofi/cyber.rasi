@@ -1,0 +1,19 @@
+* {
+    background: #0a0a0f;
+    foreground: #e0e0ff;
+    selected-background: #00f5ff;
+    selected-foreground: #000000;
+    border-color: #00f5ff;
+    border: 2px;
+    border-radius: 12px;
+}
+
+window {
+    width: 35%;
+    location: center;
+}
+
+element selected {
+    background-color: #00f5ff;
+    text-color: #000000;
+}

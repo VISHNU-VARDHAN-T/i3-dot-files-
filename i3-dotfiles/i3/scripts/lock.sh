@@ -1,0 +1,31 @@
+#!/bin/bash
+
+i3lock \
+--inside-color=00000088 \
+--ring-color=00ffff \
+--line-color=00000000 \
+--separator-color=00000000 \
+--keyhl-color=00ffff \
+--bshl-color=ff0000 \
+--ringver-color=00ff00 \
+--insidever-color=00000088 \
+--ringwrong-color=ff0000 \
+--insidewrong-color=00000088 \
+--centered \
+--radius=120 \
+--ring-width=12 \
+--verif-text="AUTHENTICATING" \
+--wrong-text="ACCESS DENIED" \
+--noinput-text="" \
+--lock-text="" \
+--time-str="%H:%M:%S" \
+--date-str="%A, %d %B" \
+--time-color=00ffff \
+--date-color=00ffff \
+--time-size=60 \
+--date-size=20 \
+--clock
+--screen 1 \
+--blur 6 \
+--clock \
+--indicator

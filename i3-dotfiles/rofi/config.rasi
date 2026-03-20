@@ -1,0 +1,38 @@
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+* {
+    background: #0a0f14;
+    background-alt: #0a0f14;
+    foreground: #00e5ff;
+    selected: #4fa6ff;
+    active: #00e5ff;
+    urgent: #ff5555;
+}
+
+window {
+    width: 32%;
+    border: 2px;
+    border-color: #00e5ff;
+    border-radius: 10px;
+}
+
+prompt {
+    enabled: true;
+}
+
+inputbar {
+    padding: 10px;
+}
+
+element {
+    padding: 8px;
+}
+
+element selected {
+    background-color: #0f1a24;
+    text-color: #4fa6ff;
+}
