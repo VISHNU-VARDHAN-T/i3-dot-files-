@@ -1,17 +1,30 @@
-# i3-dot-files
+# i3 Dotfiles
+
+A clean, minimal, and keyboard-driven **i3wm** setup optimized for Arch Linux with **Polybar**, beautiful fonts, and a productive workflow.
 
 
-A minimal, i3 setup featuring Polybar and a clean, keyboard-driven workflow.
+## Features
 
-This configuration is currently optimized for **Arch Linux**, but the overall setup is **not Arch-specific**. It can be adapted to other Linux distributions (such as Ubuntu or Fedora) with minor adjustments, mainly related to package installation and system-specific dependencies.
+- Minimal & distraction-free i3 configuration
+- Beautiful Polybar with system modules (CPU, RAM, Battery, Network, Date, etc.)
+- Nerd Fonts icon support
+- Clean keyboard-driven workflow
+- Easy to customize colors and modules
+- Well-organized configuration using standard `~/.config/` structure
+- Works great with both **X11 (i3)** and ready for **Wayland (Hyprland)** migration
 
-##  Compatibility
 
-* Arch Linux (fully tested)
-*  Other distros (Ubuntu, Debian, Fedora) — requires small tweaks
+## Requirements
 
-## Notes
+### Core Packages
+- `i3-wm`
+- `polybar`
+- `rofi`
+- `picom` (optional - for transparency & blur)
+- `dunst` (notifications)
+- `alacritty` or `kitty` (terminal)
+- `nerd-fonts` (highly recommended)
 
-* Uses Nerd Fonts for icons
-* Some components (like AUR packages) may need alternatives or manual installation on non-Arch systems
-* Paths and configurations follow standard `~/.config/` structure for portability
+### Arch Linux Installation
+```bash
+sudo pacman -S i3-wm polybar rofi picom dunst alacritty nerd-fonts
