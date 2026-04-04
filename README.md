@@ -14,7 +14,8 @@ A clean, minimal, and keyboard-driven **i3wm** setup optimized for Arch Linux wi
 - Works great with both **X11 (i3)** and ready for **Wayland (Hyprland)** migration
 
 ## 📸 Screenshots
-<img width="1919" height="1080" alt="image" src="https://github.com/user-attachments/assets/5c9aa514-503c-40c1-90ca-9065b7279619" />
+
+<img width="1919" height="1079" alt="2026-04-04_11-11" src="https://github.com/user-attachments/assets/b5a8e072-e43d-49fd-a398-44d3ca3a77d3" />
 
 
 
